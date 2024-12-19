@@ -12,6 +12,7 @@ export default class Component1 extends Component {
       guessesLeft: 6,
       numbRangeMin: 0,
       numbRangeMax: 99,
+      maxGuesses: 6,
     };
   }
   render() {
@@ -19,7 +20,7 @@ export default class Component1 extends Component {
       <View>
         <View style={styles.smallTextContainer}>
           <Text style={styles.SmallerText}>
-            I will read your mind in 6 guesses or less.
+            I will read your mind in {this.state.maxGuesses} guesses or less.
           </Text>
           <Text style={styles.SmallerText}>
             Guess a number between {this.state.numbRangeMin}-
@@ -97,6 +98,7 @@ export default class Component1 extends Component {
       guessesLeft: 6,
       numbRangeMin: 0,
       numbRangeMax: 99,
+      maxGuesses: 6,
     });
   };
 
@@ -108,6 +110,7 @@ export default class Component1 extends Component {
       guessesLeft: 10,
       numbRangeMin: 1,
       numbRangeMax: 1000,
+      maxGuesses: 10,
     });
   };
 }
